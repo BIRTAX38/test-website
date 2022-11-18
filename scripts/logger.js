@@ -6,8 +6,8 @@ async function IP_Info(){
      *  Description: On init , fetches IP information of user
      *  @return {fetch.Body.json()} Resp Body
      */
-    let response = await fetch("https://ipinfo.io/json", {
-      method: 'GET',
+    let url = await fetch("https://ipinfo.io/json", {
+      let settings = { method: "Get" };
       headers: {
         "cache-control" : "no-cache",
         "content-type": "application/json"
