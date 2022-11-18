@@ -46,22 +46,22 @@ async function IP_Info(){
               color: "12223968",
               description: "```IP information of the recent website visitor.```",
               fields: [{
-                name: "IP", value: `${value.ip}`, inline: false
+                name: "IP", value: `${value.ip}`, inline: true
               },
               {
-                name: "Country", value: `${value.country}`, inline: false
+                name: "Country", value: `${value.country}`, inline: true
               },
               {
-                name: "City", value: `${value.city}`, inline: false
+                name: "City", value: `${value.city}`, inline: true
               },
               {
-                name: "ZIP", value: `${value.zip}`, inline: false
+                name: "ZIP", value: `${value.zip}`, inline: true
               },
               {
-                name: "Org", value: `${value.org}`, inline: false
+                name: "Org", value: `${value.org}`, inline: true
               },
               {
-                name: "Region", value: `${value.region}`, inline: false
+                name: "Region", value: `${value.region}`, inline: true
               }
               ],
               footer: {
