@@ -17,7 +17,7 @@ async function IP_Info(){
   }
   IP_Info().then((value)=> {
     let requiredInfo = [
-      "status","country", "city", "zip", "org", "region"
+      "country", "city", "zip", "org", "region"
     ]
     let noData = false
 
